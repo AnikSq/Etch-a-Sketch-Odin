@@ -6,13 +6,19 @@ let main = document.querySelector('body');
 
 ruleDiv.className = "class"
 
+let gridNeeded = prompt("Enter desired grid size")
+
+gridNeeded = parseInt(gridNeeded)
+
+grid = gridNeeded * gridNeeded
+
 
 
 main.append(ruleDiv);
 
 
 
-    for(let i = 0; i < 256; i++){
+    for(let i = 0; i < grid; i++){
 
 
     
@@ -32,14 +38,24 @@ main.append(ruleDiv);
         
     }
 
+    let newEle = document.querySelectorAll('.each')
+
+    for(let i = 0; i < newEle.length ; i++){
+        
+    }
+
     
     
 
-    let newEle = document.querySelectorAll('.each')
+ 
 
   
 
     for(let i = 0; i< newEle.length; i++){
+        let heightAndWidth = 500 / gridNeeded 
+        let parse = parseFloat(heightAndWidth)
+        newEle[i].style.height = `${parse}px`;
+        newEle[i].style.width = `${parse}px`;
         newEle[i].addEventListener('mouseover',()=>{
             newEle[i].style.backgroundColor = `black`;
         })
@@ -105,7 +121,11 @@ const pickr = Pickr.create({
     }
 });
 
+let finalColor = []
+
 pickr.on('change', (color, source, instance) => {
-    let finalColor = color.toRGBA()
-    
+    finalColor = color.toRGBA()
+    window.finalColor = finalColor
 });
+
+console.log()
