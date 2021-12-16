@@ -41,7 +41,7 @@ main.append(ruleDiv);
 
     for(let i = 0; i< newEle.length; i++){
         newEle[i].addEventListener('mouseover',()=>{
-            newEle[i].style.backgroundColor = `rgba()`;
+            newEle[i].style.backgroundColor = `black`;
         })
     }
 
