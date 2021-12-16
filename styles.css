@@ -1,0 +1,36 @@
+.bold{
+    font-weight: 900;
+    font-size: 48px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+}
+
+.class{
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    width: 500px;
+    border-style: solid;
+    border-color: red;
+    border-width: 20px;
+    align-self: center;
+    flex-wrap: wrap;
+    
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.color-picker{
+    display: flex;
+    margin-left: 50px;
+}
+
+
+.each{
+    height: 31.25px;
+    width: 31.25px;
+}
