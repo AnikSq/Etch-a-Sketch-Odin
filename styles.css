@@ -4,6 +4,8 @@
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: lightslategray;
 }
 
 .class{
@@ -12,16 +14,18 @@
     height: 500px;
     width: 500px;
     border-style: solid;
-    border-color: red;
-    border-width: 20px;
+    border-color: lightseagreen;
+    border-width: 2px;
     align-self: center;
     flex-wrap: wrap;
-    
+    margin-top: 38px;
 }
 
 body{
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
+    background-color: lightgoldenrodyellow;
 }
 
 .color-picker{
@@ -29,3 +33,16 @@ body{
     margin-left: 50px;
 }
 
+.clear , .random{
+    flex-direction: row;
+    height: 50px;
+    width: 100px;
+    align-self: center;
+    background-color: lightseagreen;
+}
+
+.buttons{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
