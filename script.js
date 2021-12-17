@@ -4,15 +4,26 @@ let main = document.querySelector('body');
 
 
 
-ruleDiv.className = "class"
 
 let gridNeeded = prompt("Enter desired grid size")
+
+
+let clear = document.querySelector('.clear')
+
+let givenColor ;
+
+let randomNumberOne = 0;
+let randomNumberTwo = 0;
+let randomNumberThree = 0;
+let num = 0;
+
+
 
 gridNeeded = parseInt(gridNeeded)
 
 grid = gridNeeded * gridNeeded
 
-let clear = document.querySelector('.clear')
+ruleDiv.className = "class"
 
 
 
@@ -33,12 +44,6 @@ main.append(ruleDiv);
         
         ruleDiv.append(oneDiv);
     
-       
-        
-    
-        // for(j = 0; j<= 16; j++){
-        
-        // }
         
     }
 
@@ -58,18 +63,14 @@ main.append(ruleDiv);
         color();
     })
 
-    let givenColor ;
 
-    let randomNumberOne = 0;
-    let randomNumberTwo = 0;
-    let randomNumberThree = 0;
 
     let randColor = document.querySelector('.random')
 
 
         function truthyOrFalsey(){
             randColor.addEventListener('click',()=>{
-                return true;
+                num++;
             })
         }
         
@@ -81,17 +82,20 @@ main.append(ruleDiv);
         let parse = parseFloat(heightAndWidth)
         newEle[i].style.height = `${parse}px`;
         newEle[i].style.width = `${parse}px`;
-        if (truthyOrFalsey() == true) {
-            randomNumberOne = Math.floor(Math.random() * 255);
-            randomNumberTwo = Math.floor(Math.random() * 255);
-            randomNumberThree = Math.floor(Math.random() * 255);
-        }
-        else {
-            randomNumberOne = 0;
-            randomNumberTwo = 0;
-            randomNumberThree = 0;
-        }
+        
         newEle[i].addEventListener('mouseover',()=>{
+            truthyOrFalsey();
+            console.log(num);
+            if (num > 0) {
+                randomNumberOne = Math.floor(Math.random() * 255);
+                randomNumberTwo = Math.floor(Math.random() * 255);
+                randomNumberThree = Math.floor(Math.random() * 255);
+            }
+            else {
+                randomNumberOne = 0;
+                randomNumberTwo = 0;
+                randomNumberThree = 0;
+            }
             newEle[i].style.backgroundColor = `rgba(${randomNumberOne},${randomNumberTwo},${randomNumberThree},100)`;
         })
     }
